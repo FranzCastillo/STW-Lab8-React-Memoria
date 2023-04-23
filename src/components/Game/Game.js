@@ -7,6 +7,7 @@ import Mushroom from "../../assets/card/mushroom.png";
 import Star from "../../assets/card/star.png";
 import Back from "../../assets/card/back.png";
 import React, {useState} from "react";
+import Card from "../Card/Card";
 
 export default function Game() {
     const cardImages = [
@@ -40,12 +41,7 @@ export default function Game() {
     return(
         <div className={"card-grid"}>
             {cards.map(card => (
-                <div className={"card"} key={card.id}>
-                    <div>
-                        <img className={"front"} src={card.src} alt={"card front"}/>
-                        <img className={"back"} src={Back} alt={"card back"}/>
-                    </div>
-                </div>
+                <Card key={card.id} card={card}/>
             ))}
         </div>
     );

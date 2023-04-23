@@ -36,11 +36,6 @@ yellow btn: d4b95e
     position: absolute;
 }
 
-.card img{
-    width: 40px;
-    height: 60px;
-}
-
 #container {
     margin: auto;
     width: 600px;
