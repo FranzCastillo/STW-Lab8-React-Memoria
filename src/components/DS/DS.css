@@ -11,6 +11,36 @@ green btn: 43be85
 yellow btn: d4b95e
 */
 
+.bg {
+    display: block;
+}
+
+.bg img {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    z-index: 0;
+}
+
+#game{
+    position: absolute;
+    top: -1000px;
+    color: black;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    z-index: 1;
+    position: absolute;
+}
+
+.card img{
+    width: 40px;
+    height: 60px;
+}
+
 #container {
     margin: auto;
     width: 600px;
@@ -497,14 +527,4 @@ yellow btn: d4b95e
     100% {
         background: yellow;
     }
-}
-
-.bg {
-    display: block;
-}
-
-.bg img {
-    width: 300px;
-    height: 200px;
-    position: relative;
 }

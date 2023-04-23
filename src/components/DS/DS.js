@@ -4,6 +4,8 @@ import React from "react";
 import "./DS.css";
 import Top from "../../assets/Top.png";
 import Bottom from "../../assets/Bottom.png";
+import Game from "../Game/Game";
+
 
 export default function DS() {
     return (
@@ -73,15 +75,14 @@ export default function DS() {
 
                 <div id="bottom-screen-holder">
                     <div id="bottom-screen">
+                        <Game/>
                         <div className="bg">
-                            <img src={Bottom}
-                                 alt="New Nintendo 3DS Logo" id="3ds-logo"></img>
+                            <img src={Bottom} alt="New Nintendo 3DS Logo" id="3ds-logo"/>
                         </div>
                     </div>
-
-                    <div id="home-btn">
-                    </div>
+                    <div id="home-btn"></div>
                 </div>
+
 
                 <div id="c-stick">
                 </div>
