@@ -10,14 +10,14 @@ import React, {useEffect, useState} from "react";
 import Card from "../Card/Card";
 
 const cardImages = [
-    {src: Bowser},
-    {src: Cloud},
-    {src: Flower},
-    {src: Goomba},
-    {src: Luigi},
-    {src: Mario},
-    {src: Mushroom},
-    {src: Star},
+    {src: Bowser, matched: false },
+    {src: Cloud, matched: false },
+    {src: Flower, matched: false },
+    {src: Goomba, matched: false },
+    {src: Luigi, matched: false },
+    {src: Mario, matched: false },
+    {src: Mushroom, matched: false },
+    {src: Star, matched: false },
 ]
 let cardId = 0;
 // Shuffle the cards → Fisher-Yates shuffle
@@ -50,6 +50,13 @@ export default function Game() {
     useEffect(() => {
         if (firstCard && secondCard) {
             if (firstCard.src === secondCard.src) {
+                // Mark the cards as matched
+                setCards(cards.map(card => {
+                    if (card.src === firstCard.src) { // Doesn't matter if we use firstCard or secondCard, it's the same src
+                        return {...card, matched: true};
+                    }
+                    return card; // return the card as is if it's not the one we're looking for
+                }));
                 console.log("Match!");
             } else {
                 console.log("No match =(");
@@ -57,7 +64,6 @@ export default function Game() {
             resetMove();
         }
     }, [firstCard, secondCard]);
-
     const handleChoice = (card) => {
         firstCard ? setSecondCard(card) : setFirstCard(card); // if firstCard is null, set it to card, else set secondCard to card
     }
