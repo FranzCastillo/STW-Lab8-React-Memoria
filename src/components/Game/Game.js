@@ -6,7 +6,7 @@ import Luigi from "../../assets/card/luigi.png";
 import Mario from "../../assets/card/mario.png";
 import Mushroom from "../../assets/card/mushroom.png";
 import Star from "../../assets/card/star.png";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Card from "../Card/Card";
 
 const cardImages = [
@@ -19,10 +19,7 @@ const cardImages = [
     {src: Mushroom},
     {src: Star},
 ]
-
 let cardId = 0;
-
-
 // Shuffle the cards → Fisher-Yates shuffle
 const getShuffledCards = () => {
     let shuffledArray = [...cardImages, ...cardImages];
@@ -37,18 +34,33 @@ const getShuffledCards = () => {
 
     return shuffledArray;
 }
-
-
-const handleChoice = (card) => {
-    console.log(card);
-}
-
 export default function Game() {
     const [moves, setMoves] = useState(0);
     const [cards, setCards] = useState(getShuffledCards());
     const [firstCard, setFirstCard] = useState(null);
     const [secondCard, setSecondCard] = useState(null);
-    console.log(cards);
+
+    const resetMove = () => {
+        setFirstCard(null);
+        setSecondCard(null);
+        setMoves(moves + 1);
+    }
+
+    // Compare the two cards
+    useEffect(() => {
+        if (firstCard && secondCard) {
+            if (firstCard.src === secondCard.src) {
+                console.log("Match!");
+            } else {
+                console.log("No match =(");
+            }
+            resetMove();
+        }
+    }, [firstCard, secondCard]);
+
+    const handleChoice = (card) => {
+        firstCard ? setSecondCard(card) : setFirstCard(card); // if firstCard is null, set it to card, else set secondCard to card
+    }
 
     return(
         <div className={"card-grid"}>
