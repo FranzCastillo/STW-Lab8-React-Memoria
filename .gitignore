@@ -1,0 +1,14 @@
+# Node.js dependencies
+/node_modules
+
+# Output directories
+/dist
+/build
+
+# IDE configuration files
+.idea
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
