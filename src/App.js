@@ -1,6 +1,12 @@
 import React from "react";
+import DS from "./components/DS/DS";
+
 const App = () => {
-    return <h1>Hello React</h1>;
+    return (
+        <div className="App">
+            <DS />
+        </div>
+    );
 };
 
 export default App;

@@ -1,0 +1,510 @@
+/* Colors
+body: edf1f0
+screens, camera, mic, speakers: 000
+Lights: 7a7e7d
+circle pad holder: eaebeb
+d pad, home button: e4e5e5
+c stick, start, select, circle pad: d7dfe1
+blue btn: 6fa8eb
+red btn: ea6e4a
+green btn: 43be85
+yellow btn: d4b95e
+*/
+
+#container {
+    margin: auto;
+    width: 600px;
+    height: 700px;
+}
+
+#body {
+    width: 580px;
+    height: 663px;
+    background-color: #edf1f0;
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+}
+
+#cam-mic-holder {
+    width: 50px;
+    margin: 0 auto;
+}
+
+#camera {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 13px;
+    background: #000;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+#mic {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 8px;
+    margin-left: 35px;
+    background: #000;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+.speaker-hole {
+    width: 6px;
+    height: 6px;
+    background: #000;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#left-speaker {
+    width: 40px;
+    position: relative;
+    top: 45px;
+}
+
+#top-left-hole {
+    position: relative;
+    top: 81px;
+    margin-left: 50px;
+}
+
+#middle-left-hole {
+    position: relative;
+    top: 88px;
+    margin-left: 50px;
+}
+
+#left-left-hole {
+    position: relative;
+    top: 82px;
+    left: -15px;
+    margin-left: 50px;
+}
+
+#right-left-hole {
+    position: relative;
+    top: 77px;
+    left: 14px;
+    margin-left: 50px;
+}
+
+#bottom-left-hole {
+    position: relative;
+    top: 85px;
+    margin-left: 50px;
+}
+
+#top-screen {
+    width: 350px;
+    height: 112px;
+    position: relative;
+    top: -20px;
+    margin: 30px auto 20px auto;
+    padding: 50px 0;
+    background-color: #000;
+    border: 15px solid #EAEBEB;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#right-speaker {
+    width: 40px;
+    position: relative;
+    top: -280px;
+    left: 480px;
+}
+
+#top-right-hole {
+    position: relative;
+    top: 81px;
+    margin-left: 50px;
+}
+
+#middle-right-hole {
+    position: relative;
+    top: 88px;
+    margin-left: 50px;
+}
+
+#left-right-hole {
+    position: relative;
+    top: 82px;
+    left: -15px;
+    margin-left: 50px;
+}
+
+#right-right-hole {
+    position: relative;
+    top: 77px;
+    left: 14px;
+    margin-left: 50px;
+}
+
+#bottom-right-hole {
+    position: relative;
+    top: 85px;
+    margin-left: 50px;
+}
+
+#hinge {
+    width: 590px;
+    height: 40px;
+    position: relative;
+    top: -55px;
+    left: -5px;
+    background-color: #EAEBEB;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#hinge-light {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 13px;
+    left: 550px;
+    background-color: #7a7e7d;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+}
+
+#circle-pad-holder {
+    width: 85px;
+    height: 85px;
+    position: relative;
+    top: -15px;
+    left: 30px;
+    background-color: #eaebeb;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: inset 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: inset 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: inset 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#circle-pad {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    top: 15px;
+    left: 15px;
+    background-color: #d7dfe1;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#d-pad {
+    background: #e4e5e5;
+    width: 30px;
+    height: 75px;
+    position: relative;
+    top: 10px;
+    left: 55px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#d-pad:before {
+    background: #e4e5e5;
+    content: "";
+    width: 75px;
+    height: 28px;
+    position: absolute;
+    top: 23px;
+    left: -23px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 0px rgba(219, 222, 222, 1);
+}
+
+
+#bottom-screen-holder {
+    width: 327px;
+    height: 260px;
+    margin: 50px auto 0 auto;
+    position: relative;
+    top: -250px;
+    padding-top: 20px;
+    background-color: #EAEBEB;
+    -moz-border-radius: 15px 15px 25px 25px;
+    -webkit-border-radius: 15px 15px 25px 25px;
+    border-radius: 15px 15px 25px 25px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#bottom-screen {
+    width: 287px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #000;
+}
+
+#home-btn {
+    width: 48px;
+    height: 25px;
+    position: relative;
+    top: 15px;
+    left: 135px;
+    background-color: #e4e5e5;
+    border: 2px solid #DBDEDE;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+#c-stick {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -505px;
+    left: 480px;
+    background: #d7dfe1;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#color-button-holder {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -500px;
+    left: 515px;
+}
+
+#blue-btn {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    background-color: #6fa8eb;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#green-btn {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: -30px;
+    top: 5px;
+    background-color: #43be85;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#red-btn {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 10px;
+    background-color: #ea6e4a;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#yellow-btn {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    left: 30px;
+    top: -45px;
+    background-color: #d4b95e;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 2px rgba(219, 222, 222, 1);
+}
+
+#start-btn {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: -455px;
+    left: 470px;
+    background: #d7dfe1;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 1px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 1px rgba(219, 222, 222, 1);
+}
+
+#select-btn {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: -440px;
+    left: 470px;
+    background: #d7dfe1;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-box-shadow: 0px 0px 1px 2px rgba(219, 222, 222, 1);
+    -moz-box-shadow: 0px 0px 1px 2px rgba(219, 222, 222, 1);
+    box-shadow: 0px 0px 2px 1px rgba(219, 222, 222, 1);
+}
+
+#lights-holder {
+    width: 70px;
+    height: 10px;
+    position: relative;
+    top: -426px;
+    left: 460px;
+}
+
+#light-1 {
+    width: 5px;
+    height: 10px;
+    background-color: #7a7e7d;
+    position: relative;
+    top: 5px;
+}
+
+#light-2 {
+    width: 5px;
+    height: 10px;
+    background-color: #7a7e7d;
+    position: relative;
+    top: -5px;
+    left: 20px;
+}
+
+#light-3 {
+    width: 5px;
+    height: 10px;
+    background-color: #7a7e7d;
+    position: relative;
+    top: -15px;
+    left: 40px;
+}
+
+#power {
+    width: 175px;
+    font-weight: bold;
+    font-family: verdana, sans-serif;
+    position: relative;
+    left: 510px;
+    text-align: center;
+}
+
+#power a {
+    color: black;
+    text-decoration: none;
+}
+
+.screen-on {
+    background-color: #fff !important;
+}
+
+.light-1-on {
+    background-color: #009BEB !important;
+}
+
+.logo {
+    display: block;
+}
+
+.logo img {
+    width: 350px;
+    height: 212px;
+    position: relative;
+    top: -50px;
+}
+/* Animation styles, currently not working */
+.blink {
+    -webkit-animation-name: blink;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blink;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        background: #7a7e7d;
+    }
+    100% {
+        background: yellow;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        background: #7a7e7d;
+    }
+    100% {
+        background: yellow;
+    }
+}
+
+@keyframes blink {
+    0% {
+        background: #7a7e7d;
+    }
+    100% {
+        background: yellow;
+    }
+}
+
+.bg {
+    display: block;
+}
+
+.bg img {
+    width: 300px;
+    height: 200px;
+    position: relative;
+}
