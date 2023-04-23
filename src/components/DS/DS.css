@@ -28,13 +28,20 @@ yellow btn: d4b95e
     color: black;
 }
 
-.card-grid{
-    display:grid;
+.card-grid {
+    height: 200px;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2px;
+    padding-left: 18px;
+    padding-top: 1px;
     z-index: 1;
     position: absolute;
+    width: 300px;
+    align-content: end;
 }
+
 
 #container {
     margin: auto;

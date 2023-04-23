@@ -10,14 +10,14 @@ import React, {useEffect, useState} from "react";
 import Card from "../Card/Card";
 
 const cardImages = [
-    {src: Bowser, matched: false },
-    {src: Cloud, matched: false },
-    {src: Flower, matched: false },
-    {src: Goomba, matched: false },
-    {src: Luigi, matched: false },
-    {src: Mario, matched: false },
-    {src: Mushroom, matched: false },
-    {src: Star, matched: false },
+    {src: Bowser, matched: false},
+    {src: Cloud, matched: false},
+    {src: Flower, matched: false},
+    {src: Goomba, matched: false},
+    {src: Luigi, matched: false},
+    {src: Mario, matched: false},
+    {src: Mushroom, matched: false},
+    {src: Star, matched: false},
 ]
 let cardId = 0;
 // Shuffle the cards → Fisher-Yates shuffle
@@ -61,20 +61,21 @@ export default function Game() {
             } else {
                 console.log("No match =(");
             }
-            resetMove();
+            setTimeout(resetMove, 1500);
         }
     }, [firstCard, secondCard]);
     const handleChoice = (card) => {
         firstCard ? setSecondCard(card) : setFirstCard(card); // if firstCard is null, set it to card, else set secondCard to card
     }
 
-    return(
+    return (
         <div className={"card-grid"}>
             {cards.map(card => (
                 <Card
                     key={card.id}
                     card={card}
                     handleChoice={handleChoice}
+                    flipped={card === firstCard || card === secondCard || card.matched}
                 />
             ))}
         </div>
