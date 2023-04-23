@@ -2,7 +2,6 @@ import Back from "../../assets/card/back.png";
 import React from "react";
 import "./Card.scss";
 
-
 export default function Card({card}) {
     return(
         <div className={"card"}>

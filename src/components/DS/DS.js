@@ -7,7 +7,7 @@ import Bottom from "../../assets/Bottom.png";
 import Game from "../Game/Game";
 
 
-export default function DS() {
+export default function DS({showGame}) {
     return (
         <div id="container">
             <div id="body">
@@ -75,7 +75,7 @@ export default function DS() {
 
                 <div id="bottom-screen-holder">
                     <div id="bottom-screen">
-                        <Game/>
+                        {showGame ? <Game /> : null}
                         <div className="bg">
                             <img src={Bottom} alt="New Nintendo 3DS Logo" id="3ds-logo"/>
                         </div>

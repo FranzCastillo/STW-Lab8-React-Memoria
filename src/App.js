@@ -1,12 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import DS from "./components/DS/DS";
 
 const App = () => {
-    const [newGame, setNewGame] = useState(false);
+    const [showGame, setShowGame] = useState(false);
 
+    // Dismount the game when the user clicks the button
     const handleClick = () => {
-        setNewGame(true);
+        setShowGame(currentShowGame => !currentShowGame);
     }
+
 
     const setGame = () =>{
         console.log("setGame")
@@ -23,11 +25,11 @@ const App = () => {
                         handleClick()
                     }}
                 >
-                    Start
+                    {showGame ? "Terminar" : "Iniciar"}
                 </button>
             </div>
             <div className="right-column">
-                {newGame ? <DS/> : null}
+                <DS showGame={showGame}/>
             </div>
         </div>
 

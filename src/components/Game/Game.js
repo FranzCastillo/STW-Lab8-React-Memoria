@@ -1,17 +1,18 @@
 import Bowser from "../../assets/card/bowser.png";
+import Cloud from "../../assets/card/cloud.png";
 import Flower from "../../assets/card/flower.png";
 import Goomba from "../../assets/card/goomba.png";
 import Luigi from "../../assets/card/luigi.png";
 import Mario from "../../assets/card/mario.png";
 import Mushroom from "../../assets/card/mushroom.png";
 import Star from "../../assets/card/star.png";
-import Back from "../../assets/card/back.png";
 import React, {useState} from "react";
 import Card from "../Card/Card";
 
 export default function Game() {
     const cardImages = [
         {src: Bowser},
+        {src: Cloud},
         {src: Flower},
         {src: Goomba},
         {src: Luigi},
