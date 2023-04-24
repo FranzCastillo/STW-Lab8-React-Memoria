@@ -9,11 +9,6 @@ const App = () => {
         setShowGame(currentShowGame => !currentShowGame);
     }
 
-
-    const setGame = () =>{
-        console.log("setGame")
-    }
-
     return (
         <div className="App">
             <div className="left-column">
@@ -27,7 +22,6 @@ const App = () => {
                 >
                     {showGame ? "Terminar" : "Iniciar"}
                 </button>
-                {/*<MoveCounter/>*/}
             </div>
             <div className="right-column">
                 <DS showGame={showGame}/>

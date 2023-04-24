@@ -12,31 +12,34 @@ import Card from "../Card/Card";
 const cardImages = [
     {src: Bowser, matched: false},
     {src: Cloud, matched: false},
-    {src: Flower, matched: false},
-    {src: Goomba, matched: false},
-    {src: Luigi, matched: false},
-    {src: Mario, matched: false},
-    {src: Mushroom, matched: false},
-    {src: Star, matched: false},
+    // {src: Flower, matched: false},
+    // {src: Goomba, matched: false},
+    // {src: Luigi, matched: false},
+    // {src: Mario, matched: false},
+    // {src: Mushroom, matched: false},
+    // {src: Star, matched: false},
 ]
-let cardId = 0;
-// Shuffle the cards → Fisher-Yates shuffle
-const getShuffledCards = () => {
-    let shuffledArray = [...cardImages, ...cardImages];
-    let currentIndex = shuffledArray.length, randomIndex;
 
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-        [shuffledArray[currentIndex], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[currentIndex]];
-        shuffledArray[currentIndex] = {...shuffledArray[currentIndex], id: cardId++}; // create a new object with a unique ID
+export default function Game() {
+    let cardId = 0;
+// Shuffle the cards → Fisher-Yates shuffle
+    const shuffleCards = () => {
+        let shuffledArray = [...cardImages, ...cardImages];
+        let currentIndex = shuffledArray.length, randomIndex;
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [shuffledArray[currentIndex], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[currentIndex]];
+            shuffledArray[currentIndex] = {...shuffledArray[currentIndex], id: cardId++}; // create a new object with a unique ID
+        }
+        setMoves(0);
+        setFirstCard(null);
+        setSecondCard(null);
+        setCards(shuffledArray);
     }
 
-    return shuffledArray;
-}
-export default function Game() {
     const [moves, setMoves] = useState(0);
-    const [cards, setCards] = useState(getShuffledCards());
+    const [cards, setCards] = useState([]);
     const [firstCard, setFirstCard] = useState(null);
     const [secondCard, setSecondCard] = useState(null);
     const [disabled, setDisabled] = useState(false);
@@ -46,6 +49,13 @@ export default function Game() {
         setSecondCard(null);
         setMoves(moves + 1);
         setDisabled(false);
+    }
+
+    const checkWin = () => {
+        console.log(cards)
+        if (cards.every(card => card.matched)) {
+            console.log("You win!");
+        }
     }
 
     // Compare the two cards
@@ -60,14 +70,18 @@ export default function Game() {
                     }
                     return card; // return the card as is if it's not the one we're looking for
                 }));
-                console.log("Match!");
-            } else {
-                console.log("No match =(");
+                checkWin();
             }
             setTimeout(resetMove, 1000);
         }
     }, [firstCard, secondCard]);
+    // Starts the game
+    useEffect(() => {
+        shuffleCards();
+    }, []);
     const handleChoice = (card) => {
+        // Stop the user from being able to click the first card twice
+        if(card.id === firstCard?.id) return;
         firstCard ? setSecondCard(card) : setFirstCard(card); // if firstCard is null, set it to card, else set secondCard to card
     }
 
