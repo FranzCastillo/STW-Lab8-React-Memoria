@@ -39,16 +39,19 @@ export default function Game() {
     const [cards, setCards] = useState(getShuffledCards());
     const [firstCard, setFirstCard] = useState(null);
     const [secondCard, setSecondCard] = useState(null);
+    const [disabled, setDisabled] = useState(false);
 
     const resetMove = () => {
         setFirstCard(null);
         setSecondCard(null);
         setMoves(moves + 1);
+        setDisabled(false);
     }
 
     // Compare the two cards
     useEffect(() => {
         if (firstCard && secondCard) {
+            setDisabled(true); // When 2 cards are picked, we disable the other cards
             if (firstCard.src === secondCard.src) {
                 // Mark the cards as matched
                 setCards(cards.map(card => {
@@ -61,7 +64,7 @@ export default function Game() {
             } else {
                 console.log("No match =(");
             }
-            setTimeout(resetMove, 1500);
+            setTimeout(resetMove, 1000);
         }
     }, [firstCard, secondCard]);
     const handleChoice = (card) => {
@@ -76,6 +79,7 @@ export default function Game() {
                     card={card}
                     handleChoice={handleChoice}
                     flipped={card === firstCard || card === secondCard || card.matched}
+                    disabled={disabled}
                 />
             ))}
         </div>

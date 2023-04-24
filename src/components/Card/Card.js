@@ -2,9 +2,11 @@ import Back from "../../assets/card/back.png";
 import React from "react";
 import "./Card.scss";
 
-export default function Card({card, handleChoice, flipped}) {
+export default function Card({card, handleChoice, flipped, disabled}) {
     const handleClick = () => {
-        handleChoice(card);
+        if (!disabled){ // If the card is not disabled (2 cards already picked), we can flip it
+            handleChoice(card);
+        }
     }
 
     return(
