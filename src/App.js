@@ -27,6 +27,7 @@ const App = () => {
                 >
                     {showGame ? "Terminar" : "Iniciar"}
                 </button>
+                {/*<MoveCounter/>*/}
             </div>
             <div className="right-column">
                 <DS showGame={showGame}/>

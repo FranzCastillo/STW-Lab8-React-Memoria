@@ -72,16 +72,21 @@ export default function Game() {
     }
 
     return (
-        <div className={"card-grid"}>
-            {cards.map(card => (
-                <Card
-                    key={card.id}
-                    card={card}
-                    handleChoice={handleChoice}
-                    flipped={card === firstCard || card === secondCard || card.matched}
-                    disabled={disabled}
-                />
-            ))}
+        <div>
+            <div className={"card-grid"}>
+                {cards.map(card => (
+                    <Card
+                        key={card.id}
+                        card={card}
+                        handleChoice={handleChoice}
+                        flipped={card === firstCard || card === secondCard || card.matched}
+                        disabled={disabled}
+                    />
+                ))}
+            </div>
+            <div className={"move-counter"}>
+                <h1>Moves: {moves}</h1>
+            </div>
         </div>
     );
 };

@@ -10,6 +10,12 @@ red btn: ea6e4a
 green btn: 43be85
 yellow btn: d4b95e
 */
+.move-counter{
+    color: #f3cf60;
+    z-index: 50;
+    position: absolute;
+    top: -325px;
+}
 
 .bg {
     display: block;
