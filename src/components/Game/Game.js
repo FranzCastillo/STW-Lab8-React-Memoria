@@ -7,17 +7,19 @@ import Mario from "../../assets/card/mario.png";
 import Mushroom from "../../assets/card/mushroom.png";
 import Star from "../../assets/card/star.png";
 import React, {useEffect, useState} from "react";
+import Playing from "../../assets/playing.gif";
+import Won from "../../assets/won.gif";
 import Card from "../Card/Card";
 
 const cardImages = [
     {src: Bowser, matched: false},
     {src: Cloud, matched: false},
-    // {src: Flower, matched: false},
-    // {src: Goomba, matched: false},
-    // {src: Luigi, matched: false},
-    // {src: Mario, matched: false},
-    // {src: Mushroom, matched: false},
-    // {src: Star, matched: false},
+    {src: Flower, matched: false},
+    {src: Goomba, matched: false},
+    {src: Luigi, matched: false},
+    {src: Mario, matched: false},
+    {src: Mushroom, matched: false},
+    {src: Star, matched: false},
 ]
 
 export default function Game() {
@@ -43,6 +45,7 @@ export default function Game() {
     const [firstCard, setFirstCard] = useState(null);
     const [secondCard, setSecondCard] = useState(null);
     const [disabled, setDisabled] = useState(false);
+    const [won, setWon] = useState(false);
 
     const resetMove = () => {
         setFirstCard(null);
@@ -52,9 +55,8 @@ export default function Game() {
     }
 
     const checkWin = () => {
-        console.log(cards)
         if (cards.every(card => card.matched)) {
-            console.log("You win!");
+            setWon(true);
         }
     }
 
@@ -64,12 +66,8 @@ export default function Game() {
             setDisabled(true); // When 2 cards are picked, we disable the other cards
             if (firstCard.src === secondCard.src) {
                 // Mark the cards as matched
-                setCards(cards.map(card => {
-                    if (card.src === firstCard.src) { // Doesn't matter if we use firstCard or secondCard, it's the same src
-                        return {...card, matched: true};
-                    }
-                    return card; // return the card as is if it's not the one we're looking for
-                }));
+                firstCard.matched = true;
+                secondCard.matched = true;
                 checkWin();
             }
             setTimeout(resetMove, 1000);
@@ -87,6 +85,8 @@ export default function Game() {
 
     return (
         <div>
+            <img src={Playing} alt={"Playing"} className={"playing"}/>
+            {won ? <img src={Won} alt={"won"} className={"won"}/> : null}
             <div className={"card-grid"}>
                 {cards.map(card => (
                     <Card
@@ -99,7 +99,7 @@ export default function Game() {
                 ))}
             </div>
             <div className={"move-counter"}>
-                <h1>Moves: {moves}</h1>
+                <h1>{moves}</h1>
             </div>
         </div>
     );

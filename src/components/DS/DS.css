@@ -11,10 +11,33 @@ green btn: 43be85
 yellow btn: d4b95e
 */
 .move-counter{
-    color: #f3cf60;
+    color: #e5ba3a;
     z-index: 50;
     position: absolute;
-    top: -325px;
+    top: -140px;
+    left: -5px;
+    font-size: 8px;
+    /*Text shadow as an outline*/
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.won{
+    z-index: 49;
+    position: absolute;
+    top: -315px;
+    left: -30px;
+
+    width: 348px;
+    height: 210px;
+}
+.playing{
+    z-index: 49;
+    position: absolute;
+    top: -315px;
+    left: -30px;
+
+    width: 348px;
+    height: 210px;
 }
 
 .bg {

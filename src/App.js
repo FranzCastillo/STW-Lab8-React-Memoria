@@ -11,7 +11,7 @@ const App = () => {
 
     return (
         <div className="App">
-            <div className="left-column">
+            <div className={"left-column"}>
                 <h1>New Super Mario Bros DS</h1>
                 <h2>Memory Match</h2>
                 <button
