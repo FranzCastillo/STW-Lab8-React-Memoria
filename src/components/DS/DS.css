@@ -20,7 +20,6 @@ yellow btn: d4b95e
     /*Text shadow as an outline*/
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-
 .won{
     z-index: 49;
     position: absolute;
